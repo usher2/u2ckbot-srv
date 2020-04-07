@@ -1,0 +1,35 @@
+version: '3.3'
+
+services:
+        ckdump:
+                build:
+                        context: ./ckdump
+                container_name: ckdump
+                environment:
+                        - DATA_DIR=/var/res
+                        - DEBUG_LEVEL=Info
+                        - TOKEN=SIMPLE_TOKEN_005e7e058218bb6b57109831befe49ddc8b8fa868bb09afa0290152f102e42ea
+                        - URL=https://service.example.com
+                        - LISTEN_PORT=40002
+                volumes:
+                        - res:/var/res
+                networks:
+                        - apps
+                ports:
+                        - "40002:40002"
+                logging:
+                        driver: syslog
+                        options:
+                                tag: ckdump
+                restart: always
+volumes:
+        res:
+                external: true
+networks:
+        apps:
+            driver: bridge
+            ipam:
+                driver: default
+                config:
+                    - subnet: 172.21.37.0/24
+

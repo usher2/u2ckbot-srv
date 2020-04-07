@@ -1,0 +1,6 @@
+*\~
+*.swp
+*.log
+docker-compose.yml
+README.letsencrypt
+nginx/
