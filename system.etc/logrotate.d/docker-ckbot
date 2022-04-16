@@ -1,5 +1,5 @@
-/var/log/ckbot/info.log
-/var/log/ckbot/error.log
+/var/opt/logs-srv-ru-ckbot/info.log
+/var/opt/logs-srv-ru-ckbot/error.log
 {
         rotate 2
         daily
