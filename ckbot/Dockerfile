@@ -1,4 +1,4 @@
-FROM golang:1.14-alpine
+FROM golang:1.19-alpine
 
 WORKDIR /go/src/app
 RUN addgroup -g 5001 alice \
