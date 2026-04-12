@@ -15,6 +15,10 @@ if [ ! -z "${TOKEN}" ]; then
 	echo "Token=${TOKEN}" >> "${configfile}"
 fi
 
+if [ ! -z "${PROXY}" ]; then
+	echo "Proxy=${PROXY}" >> "${configfile}"
+fi
+
 if [ ! -z "${CKDUMPSERVER}" ]; then
 	echo "CkDumpServer=${CKDUMPSERVER}" >> "${configfile}"
 fi
